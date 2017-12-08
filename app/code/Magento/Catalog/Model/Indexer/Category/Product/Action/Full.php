@@ -13,6 +13,16 @@ class Full extends \Magento\Catalog\Model\Indexer\Category\Product\AbstractActio
      * @var bool
      */
     protected $useTempTable = false;
+    
+    /**
+     * Still the best option to fix the 500 cap on categories.
+     * this is fixed in new version of magento
+     * @return bool
+     */
+    protected function isRangingNeeded()
+    {
+        return false;
+    }
 
     /**
      * Refresh entities index
